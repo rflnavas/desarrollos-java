@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?> <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">01234</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/mymanagerDB</property>
+
+        <property name="connection_pool_size">1</property>
+        <property name="show_sql">true</property>
+        <!-- >>>>>Initial SessionFactory creation failed.org.hibernate.HibernateException: Wrong column type in my_highschool.course for column end_date. Found: date, expected: timestamp 
+ 		<property name="hibernate.hbm2ddl.auto">validate</property> -->
+        
+        <!-- current_session_context_class
+        Ver:https://forums.hibernate.org/viewtopic.php?p=2384980
+        
+        When you create a hibernate session using any of the sessionFactory.openSession(...) methods the session 
+        factory will 'bind' the session to the current context. 
+        The default context is 'thread' which means the sesion factory will bind the session to the thread 
+        from which openSession(...) is called.  
+        
+        Se utiliza para poder llamar a getCurrentSession() sin necesidad de llamar antes a openSession()
+        Si no se declara se puede tener este error
+        org.hibernate.HibernateException: No CurrentSessionContext configured! 
+        -->
+
+        <property name="current_session_context_class">thread</property>
+        <!-- 
+        Validate = Valida el esquema de la base de datos sin realizar cambios a la información.
+        update : Solo actualiza la base de datos una vez es creado el esquema 
+        Create = Crea la base de datos eliminando el esquema existente.
+        Create-drop = Crea una nueva base de datos y la elimina cuando la SessionFactory es destruida. SessionFactory 
+        es la que se encarga de definir todas las variables necesarias para que Hibernate funcione correctamente.
+        
+        Create-drop es la opción por defecto de la plantilla ejemplo, y en mi caso lo soluciono con la opción Validate, 
+        preservando la información de la base de datos ante cualquier inconveniente.
+        -->
+		<mapping resource="es/hibernatewebapp/config/user.hbm.xml"/>
+<!--         <mapping resource="es/hibernatewebapp/config/student.hbm.xml"/> -->
+<!--         <mapping resource="es/hibernatewebapp/config/mark.hbm.xml"/> -->
+		<!-- Pasamos a hacerlo con anotaciones
+		Es posible que convivan las dos formas (XML o con anotaciones). 
+		Existe un parametro de configuración en Hibernate para cambiar la 
+		prioridad de la estrategia de mapeo de entidades. Por defecto, manda el XML sobre anotaciones 
+		si dada una clase ésta se intenta mapearla de las dos maneras "accidentalmente"   -->
+        
+        <mapping class="es.hibernatewebapp.entities.Student"/>
+        <mapping class="es.hibernatewebapp.entities.Mark"/>
+        <mapping class="es.hibernatewebapp.entities.Course"/>
+        <mapping class="es.hibernatewebapp.entities.Exam"/>
+<!--        	<mapping class="es.hibernatewebapp.bean.User"/> -->
+    </session-factory>
+</hibernate-configuration>

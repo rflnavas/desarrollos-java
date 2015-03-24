@@ -1,0 +1,9 @@
+/*
+		sb.append(" WHERE ").append(StudentDAO.Column.ID.colName()).append(Column.ID);
+		String colIDName = StudentDAO.Column.ID.colName();
+		String strQuery = String.format("%s WHERE %s = :%s", 
+				StudentDAO.FROM_STUDENT, colIDName, colIDName);
+		
+		Query q = HibernateUtil.getSession().createQuery(strQuery);
+		q.setParameter(colIDName, id)
+		*/

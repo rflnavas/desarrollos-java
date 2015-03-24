@@ -1,0 +1,41 @@
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate 360deg;
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes desplazaLateral {
+  0% {
+    color: #5a5a5a;
+    margin-left: 0%;
+  }
+  50% {
+    color: #ffffff;
+    margin-left: 20%;
+  }
+  100% {
+    color: #5a5a5a;
+    margin-left: 0%;
+  }
+}
+@keyframes desplazaLateral {
+  0% {
+    color: #5a5a5a;
+    margin-left: 0%;
+  }
+  50% {
+    color: #ffffff;
+    /*margin-left:20%;*/
+    margin-left: 20%;
+  }
+  100% {
+    color: #5a5a5a;
+    /*margin-left:0%;*/
+    margin-left: 0%;
+  }
+}

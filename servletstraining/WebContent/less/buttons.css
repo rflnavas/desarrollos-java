@@ -1,0 +1,53 @@
+.btn {
+  font-weight: bold;
+  padding: 6px 6px;
+  outline: none;
+  border: 0px;
+  cursor: pointer;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  transition: background-color 0.5s ease-in;
+  -web-kit-transition: background-color 0.5s ease-in;
+  -moz-kit-transition: background-color 0.5s ease-in;
+  -o-transition: background-color 0.5s ease-in;
+  -ms-transition: background-color 0.5s ease-in;
+}
+.btnSuccess {
+  color: #fafafa;
+  background-color: #117711;
+  /*.gradient;*/
+}
+.btnSuccess:hover {
+  background-color: #1ed01e;
+}
+.btnCancel {
+  color: #111111;
+  background-color: #cecece;
+}
+.btnCancel:hover {
+  background-color: #e8e8e8;
+}
+.Success {
+  color: #fafafa;
+  background-color: #117711;
+}
+.Neutral {
+  color: #111111;
+  background-color: #cecece;
+}
+.ButtonStyle {
+  font-weight: bold;
+  padding: 6px 6px;
+  outline: none;
+  border: 0px;
+  cursor: pointer;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  transition: background-color 0.5s ease-in;
+  -web-kit-transition: background-color 0.5s ease-in;
+  -moz-kit-transition: background-color 0.5s ease-in;
+  -o-transition: background-color 0.5s ease-in;
+  -ms-transition: background-color 0.5s ease-in;
+}

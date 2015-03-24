@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class name="es.hibernatewebapp.entities.Student" table="my_highschool.STUDENT">
+		<id name="id" type="java.lang.Long">
+			<column name="ID_STUDENT"></column>
+			<generator class="sequence"></generator>
+		</id>
+		<property name="name" column="name" type="string"></property>
+		<property name="surname" column="surname" type="string"></property>
+		<property name="birthDate" column="birthdate" type="java.util.Date"></property>
+		
+		<set name="marks" table="my_highschool.MARKS" lazy="true" fetch="select" inverse="true">
+			<key>
+				<column name="ID_STUDENT" not-null="true"></column>
+			</key>			
+			<one-to-many class="es.hibernatewebapp.entities.Mark"/>
+		</set>
+	</class>
+</hibernate-mapping>

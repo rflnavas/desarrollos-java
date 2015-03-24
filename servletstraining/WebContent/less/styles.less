@@ -1,0 +1,56 @@
+@lightGreen:#AAFFAA;
+@darkgreen:#117711;
+@black:#111111;
+@grey:#CECECE;
+@white:#FAFAFA;
+@headerBackground:#111199;
+@btnBackColorSuccess:@darkgreen;
+@btnColorSuccess:@white;
+
+@import "rules";
+@import "buttons";
+@import "animations";
+
+div.ok{
+	color:@darkgreen;
+	background-color:@lightGreen;
+	padding:10px 10px;
+	.Rounded(15px);
+}
+
+header{
+	background-color:@headerBackground;
+	#divHeader{
+		-webkit-animation: desplazaLateral 2s linear infinite;
+		animation: desplazaLateral 2s linear infinite;
+	}
+}
+
+.paragraph(@v) when (@v<1){
+	background-color:white;
+	color:black;
+}
+
+.paragraph(@v) when (@v>=1){
+	background-color:black;
+	color:white;
+}
+
+
+.backgroundColor(@v, @step:10) when (@v - @step > 0) and not(@step = 0){ 
+	.bColor@{v} {background-color: rgb(@v, @v, @v);}
+	.backgroundColor(@v - @step);
+}
+
+.backgroundColor(0){}
+
+@initialValue:210;
+
+.backgroundColor(@initialValue, 30);
+
+.parr1{
+	.paragraph(0);
+}
+.parr2{
+	.paragraph(2);
+}

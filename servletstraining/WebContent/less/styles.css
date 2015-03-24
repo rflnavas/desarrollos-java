@@ -1,0 +1,171 @@
+.ButtonStyle {
+  font-weight: bold;
+  padding: 6px 6px;
+  outline: none;
+  border: 0px;
+  cursor: pointer;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  transition: background-color 0.5s ease-in;
+  -web-kit-transition: background-color 0.5s ease-in;
+  -moz-kit-transition: background-color 0.5s ease-in;
+  -o-transition: background-color 0.5s ease-in;
+  -ms-transition: background-color 0.5s ease-in;
+}
+.btn {
+  font-weight: bold;
+  padding: 6px 6px;
+  outline: none;
+  border: 0px;
+  cursor: pointer;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  transition: background-color 0.5s ease-in;
+  -web-kit-transition: background-color 0.5s ease-in;
+  -moz-kit-transition: background-color 0.5s ease-in;
+  -o-transition: background-color 0.5s ease-in;
+  -ms-transition: background-color 0.5s ease-in;
+}
+.btnSuccess {
+  color: #fafafa;
+  background-color: #117711;
+  /*.gradient;*/
+}
+.btnSuccess:hover {
+  background-color: #1ed01e;
+}
+.btnCancel {
+  color: #111111;
+  background-color: #cecece;
+}
+.btnCancel:hover {
+  background-color: #e8e8e8;
+}
+.Success {
+  color: #fafafa;
+  background-color: #117711;
+}
+.Neutral {
+  color: #111111;
+  background-color: #cecece;
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate 360deg;
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes desplazaLateral {
+  0% {
+    color: #5a5a5a;
+    margin-left: 0%;
+  }
+  50% {
+    color: #ffffff;
+    margin-left: 20%;
+  }
+  100% {
+    color: #5a5a5a;
+    margin-left: 0%;
+  }
+}
+@keyframes desplazaLateral {
+  0% {
+    color: #5a5a5a;
+    margin-left: 0%;
+  }
+  50% {
+    color: #ffffff;
+    /*margin-left:20%;*/
+    margin-left: 20%;
+  }
+  100% {
+    color: #5a5a5a;
+    /*margin-left:0%;*/
+    margin-left: 0%;
+  }
+}
+div.ok {
+  color: #117711;
+  background-color: #aaffaa;
+  padding: 10px 10px;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+header {
+  background-color: #111199;
+}
+header #divHeader {
+  -webkit-animation: desplazaLateral 2s linear infinite;
+  animation: desplazaLateral 2s linear infinite;
+}
+.bColor210 {
+  background-color: #d2d2d2;
+}
+.bColor180 {
+  background-color: #b4b4b4;
+}
+.bColor170 {
+  background-color: #aaaaaa;
+}
+.bColor160 {
+  background-color: #a0a0a0;
+}
+.bColor150 {
+  background-color: #969696;
+}
+.bColor140 {
+  background-color: #8c8c8c;
+}
+.bColor130 {
+  background-color: #828282;
+}
+.bColor120 {
+  background-color: #787878;
+}
+.bColor110 {
+  background-color: #6e6e6e;
+}
+.bColor100 {
+  background-color: #646464;
+}
+.bColor90 {
+  background-color: #5a5a5a;
+}
+.bColor80 {
+  background-color: #505050;
+}
+.bColor70 {
+  background-color: #464646;
+}
+.bColor60 {
+  background-color: #3c3c3c;
+}
+.bColor50 {
+  background-color: #323232;
+}
+.bColor40 {
+  background-color: #282828;
+}
+.bColor30 {
+  background-color: #1e1e1e;
+}
+.bColor20 {
+  background-color: #141414;
+}
+.parr1 {
+  background-color: white;
+  color: black;
+}
+.parr2 {
+  background-color: black;
+  color: white;
+}

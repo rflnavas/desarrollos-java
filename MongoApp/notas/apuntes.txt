@@ -1,0 +1,5 @@
+http://docs.mongodb.org/manual/reference/method/db.createCollection/
+
+La colección se creó desde la consola de MongoDB.
+
+db.createCollection("myMongoDB");

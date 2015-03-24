@@ -1,0 +1,5 @@
+/*
+.backgroundColor(@v, @c, @step) when (@v > 10) and (@c > 0){
+	.backgroundColor(@v - 1, @c - @step, @step);
+	.bColor@{v} {background-color: rgb(@c, @c, @c);}
+}*/

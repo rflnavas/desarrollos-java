@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.hibernatewebapp.entities.Mark" table="my_highschool.MARK">
+		<id name="id" column="ID_MARK" type="java.lang.Long">
+			<generator class="sequence"></generator>
+		</id>
+		<many-to-one name="student" class="es.hibernatewebapp.entities.Student" fetch="select">
+			<column name="ID_STUDENT" not-null="true"/>
+		</many-to-one>
+		<property name="score" column="SCORE" type="java.lang.Double"></property>
+	</class>
+</hibernate-mapping>

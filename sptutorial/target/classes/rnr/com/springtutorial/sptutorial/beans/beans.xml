@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-autowire="byType">
+
+	<bean id="tiger" class="rnr.com.springtutorial.sptutorial.beans.Animal">
+		<property name="name" value="Big cat"/>
+		<property name="type" value="Tiger"/>
+	</bean>
+	
+	<bean id="zebra" class="rnr.com.springtutorial.sptutorial.beans.Animal">
+		<property name="name" value="Striped horse"/>
+		<property name="type" value="Zebra"/>
+	</bean>
+	 
+	<bean name="jungle" class="rnr.com.springtutorial.sptutorial.beans.Jungle">
+		<property name="animals">
+			<list>
+				<ref bean="tiger"/>
+				<ref bean="zebra"/>
+			</list>
+		</property>
+	</bean>
+	
+	
+	<bean name="personDAO"
+		class="rnr.com.springtutorial.sptutorial.dao.PersonDAO">
+	</bean>
+
+	<bean name="personService"
+		class="rnr.com.springtutorial.sptutorial.service.PersonService">
+	</bean>
+
+
+</beans>

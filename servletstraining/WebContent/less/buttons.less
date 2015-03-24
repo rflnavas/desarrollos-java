@@ -1,0 +1,41 @@
+.ButtonStyle{
+	font-weight: bold;
+	padding:6px 6px;
+	outline:none;
+	border: 0px;
+	cursor: pointer;
+	.Rounded(8px);
+	.Transition(background-color, 0.5s, ease-in);
+}
+
+.btn{
+	.ButtonStyle;
+}
+.btnSuccess{
+	.Success;
+	/*.gradient;*/
+}
+
+.btnSuccess:hover{
+	background-color:lighten(@btnBackColorSuccess, 20%);
+}
+
+.btnCancel{
+	.Neutral;
+}
+
+.btnCancel:hover{
+	background-color:lighten(@grey, 10%);
+}
+
+.Success{
+	color:@btnColorSuccess;
+	background-color:@btnBackColorSuccess;
+}
+
+.Neutral{
+	color:@black;
+	background-color:@grey;
+}
+
+
